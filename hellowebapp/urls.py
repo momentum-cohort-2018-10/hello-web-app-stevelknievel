@@ -22,5 +22,7 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    path('voiceoverequipments/<slug>/', views.voiceoverequipment_detail, name='voiceoverequipment_detail'),
+    path('voiceoverequipments/<slug>/edit/', views.edit_voiceoverequipment, name='edit_voiceoverequipment'),
     path('admin/', admin.site.urls),
 ]
