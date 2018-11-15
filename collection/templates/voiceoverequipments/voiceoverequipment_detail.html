@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ voiceoverequipment.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ voiceoverequipment.name }}</h1> 
+    <p>{{ voiceoverequipment.description }}</p>
+    <a href="{% url 'edit_voiceoverequipment' slug=voiceoverequipment.slug %}">
+        Edit me!
+    </a>
+{% endblock content %}
+
