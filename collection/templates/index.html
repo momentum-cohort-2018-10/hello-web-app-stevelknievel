@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Hello World!</h1>
+    <p>There are six dogs! <b>
+        {% if number == 6 %}
+            True
+        {% else %}
+            False
+        {% endif %}
+    </b></p>
+    <p>This is my name: {{ thing|title }}</p>
+{% endblock content %}
+
