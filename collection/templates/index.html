@@ -4,9 +4,11 @@
 {% endblock title %}
 
 {% block content %}
-    {% for VoiceOverEquipment in VoiceOverEquipments %}
-    <h2>{{ VoiceOverEquipment.name }}</h2>
-    <p>{{ VoiceOverEquipment.description }}</p>
+    {% for voiceoverequipment in voiceoverequipments %}
+        <h2><a href="{% url 'voiceoverequipment_detail' slug=voiceoverequipment.slug %}">
+            {{ voiceoverequipment.name }}
+        </a></h2>
+        <p>{{ voiceoverequipment.description }}</p>
     {% endfor %}
 {% endblock content %}
 
