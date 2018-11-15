@@ -4,14 +4,9 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>There are six dogs! <b>
-        {% if number == 6 %}
-            True
-        {% else %}
-            False
-        {% endif %}
-    </b></p>
-    <p>This is my name: {{ thing|title }}</p>
+    {% for VoiceOverEquipment in VoiceOverEquipments %}
+    <h2>{{ VoiceOverEquipment.name }}</h2>
+    <p>{{ VoiceOverEquipment.description }}</p>
+    {% endfor %}
 {% endblock content %}
 
