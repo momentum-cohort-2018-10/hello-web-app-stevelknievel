@@ -6,8 +6,11 @@
 {% block content %}
     <h1>{{ voiceoverequipment.name }}</h1> 
     <p>{{ voiceoverequipment.description }}</p>
-    <a href="{% url 'edit_voiceoverequipment' slug=voiceoverequipment.slug %}">
-        Edit me!
-    </a>
+    {% if user == voiceoverequipment.user %}
+    <p>
+        <a href="{% url 'edit_voiceoverequipment' slug=voiceoverequipment.slug %}">
+        Edit me!</a>
+    </p>
+        {% endif %}
 {% endblock content %}
 
