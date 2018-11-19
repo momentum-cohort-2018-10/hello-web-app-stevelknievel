@@ -33,7 +33,7 @@ urlpatterns = [
     path('voiceoverequipments/<slug>/edit/', views.edit_voiceoverequipment, name='edit_voiceoverequipment'),
     # redirect view:    
     path('browse/', RedirectView.as_view(pattern_name='browse', permanent=True)),
-     # our new browse flow:
+    # new browse flow:
     path('browse/name/', views.browse_by_name, name='browse'),
     path('browse/name/<initial>/', views.browse_by_name, name='browse_by_name'),
     # PW reset URLs:
